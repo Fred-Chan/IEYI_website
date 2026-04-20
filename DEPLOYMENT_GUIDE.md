@@ -347,6 +347,48 @@ vercel --prod
 # 3. 清除浏览器缓存
 ```
 
+### 问题 6：`vercel --prod` 报错 `Error: Invalid JSON response`
+
+**症状：**
+```
+Deploying fredchans-projects/ieyi-website
+Error: Invalid JSON response
+```
+
+**原因：** 系统环境变量 `NODE_TLS_REJECT_UNAUTHORIZED=0` 与 Vercel API 的 TLS 握手存在冲突，导致上传请求返回非 JSON 内容。
+
+**解决方案：**
+```bash
+# 部署时临时覆盖该环境变量，强制启用 TLS 证书验证
+NODE_TLS_REJECT_UNAUTHORIZED=1 vercel --prod --yes
+```
+
+> **注意：** 后续每次手动部署都需要加 `NODE_TLS_REJECT_UNAUTHORIZED=1` 前缀，或在 shell 配置文件（`~/.zshrc`）中彻底移除 `NODE_TLS_REJECT_UNAUTHORIZED=0` 的设置。
+
+### 问题 7：上传体积过大导致 `Unexpected end of JSON input`
+
+**症状：**
+```
+Uploading [====================] (1.5MB/1.5MB)
+Error: FetchError: invalid json response body at https://api.vercel.com/v2/files
+  reason: Unexpected end of JSON input
+```
+
+**原因：** 项目目录中存在 PDF 等大文件（本项目约 1.5MB），上传时服务端响应被截断。
+
+**解决方案：** 在项目根目录创建 `.vercelignore`，排除不需要部署的大文件：
+
+```
+# .vercelignore
+*.pdf
+DEPLOYMENT_GUIDE.md
+README.md
+```
+
+添加后上传体积从 1.5MB 降至几十 KB，部署立即成功。
+
+> **最佳实践：** 所有新项目都应提前创建 `.vercelignore`，排除文档、设计稿、原始素材等非网站资源。
+
 ---
 
 ## 💡 最佳实践
@@ -363,6 +405,7 @@ vercel --prod
 
 每个项目都应包含：
 - `vercel.json` - 路由和重定向配置
+- `.vercelignore` - 排除 PDF、文档等非网站资源，避免上传体积过大
 - `.gitignore` - 忽略 `.vercel` 目录
 - `README.md` - 项目说明文档
 
