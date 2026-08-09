@@ -10,15 +10,18 @@
         html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body { font-family: 'Inter', sans-serif; }
         .hero-bg {
-            background-image: url('水立方夜景.jpg');
+            background-image: url('assets/1.webp');
             background-size: cover;
-            background-position: center;
+            background-position: center 40%;
             background-repeat: no-repeat;
         }
         .tab-btn.active { background-color: #1d4ed8; color: #fff; }
         .tab-btn { transition: all .2s; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
+        .photo-card { box-shadow: 0 20px 45px -18px rgba(15, 23, 42, .35); }
+        .photo-card img { transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+        .photo-card:hover img { transform: scale(1.03); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -34,7 +37,6 @@
             </div>
             <div class="hidden lg:flex items-center space-x-6">
                 <a href="#about"        class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">About</a>
-                <a href="#dates"        class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Dates</a>
                 <a href="#categories"   class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Categories</a>
                 <a href="#awards"       class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Awards</a>
                 <a href="#schedule"     class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Schedule</a>
@@ -51,7 +53,6 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-4 space-y-3">
         <a href="#about"        class="block text-slate-600 hover:text-blue-700 font-medium py-1">About</a>
-        <a href="#dates"        class="block text-slate-600 hover:text-blue-700 font-medium py-1">Dates</a>
         <a href="#categories"   class="block text-slate-600 hover:text-blue-700 font-medium py-1">Categories</a>
         <a href="#awards"       class="block text-slate-600 hover:text-blue-700 font-medium py-1">Awards</a>
         <a href="#schedule"     class="block text-slate-600 hover:text-blue-700 font-medium py-1">Schedule</a>
@@ -62,7 +63,7 @@
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
 <header class="relative h-screen min-h-[600px] flex items-center justify-center hero-bg">
-    <div class="absolute inset-0 bg-slate-900/60 bg-gradient-to-b from-slate-900/70 via-slate-900/40 to-slate-900/80"></div>
+    <div class="absolute inset-0 bg-slate-900/55 bg-gradient-to-b from-slate-900/75 via-slate-900/60 to-slate-900/90"></div>
     <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mt-16">
         <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 backdrop-blur-sm text-blue-100 font-medium text-sm mb-6 tracking-wide uppercase">
             July 27–30, 2026 · Beijing, China
@@ -136,30 +137,31 @@
             </div>
         </div>
 
-    </div>
-</section>
+        <!-- Event highlights photo gallery -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <figure class="photo-card group relative overflow-hidden rounded-2xl">
+                <img src="assets/5.webp" alt="Young students demonstrate their Smart High-Branch Pruner invention" width="1920" height="1349" loading="lazy" class="w-full h-64 md:h-72 object-cover">
+                <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4 pt-10">
+                    <span class="text-white text-sm font-semibold">Young Innovators</span>
+                    <span class="block text-blue-200 text-xs mt-0.5">Creativity in action, hands-on demos</span>
+                </figcaption>
+            </figure>
+            <figure class="photo-card group relative overflow-hidden rounded-2xl">
+                <img src="assets/4.webp" alt="Team Italy presents their Beyond the Brushstroke project to a judge" width="1920" height="1321" loading="lazy" class="w-full h-64 md:h-72 object-cover">
+                <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4 pt-10">
+                    <span class="text-white text-sm font-semibold">Global Exchange</span>
+                    <span class="block text-blue-200 text-xs mt-0.5">Nearly 40 member countries &amp; regions</span>
+                </figcaption>
+            </figure>
+            <figure class="photo-card group relative overflow-hidden rounded-2xl">
+                <img src="assets/2.webp" alt="Team Thailand showcases the STROKE SNAP stroke-screening invention" width="1920" height="1120" loading="lazy" class="w-full h-64 md:h-72 object-cover">
+                <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4 pt-10">
+                    <span class="text-white text-sm font-semibold">Student Innovation</span>
+                    <span class="block text-blue-200 text-xs mt-0.5">Inventions tackling real-world problems</span>
+                </figcaption>
+            </figure>
+        </div>
 
-<!-- ═══════════════════════════════ IMPORTANT DATES ═══════════════════════════════ -->
-<section id="dates" class="py-20 bg-blue-700">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-14">
-            <h2 class="text-3xl font-bold text-white sm:text-4xl">Important Dates</h2>
-            <div class="w-20 h-1 bg-blue-300 mx-auto mt-4 rounded-full"></div>
-        </div>
-        <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition">
-                <div class="text-4xl font-extrabold text-white mb-1">Jul 27</div>
-                <div class="text-blue-200 text-sm font-medium mb-3">2026</div>
-                <div class="text-lg font-semibold text-white mb-2">Arrival Day</div>
-                <p class="text-blue-200 text-sm">Teams arrive in Beijing. Check-in at designated hotel (15:00–18:00).</p>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition">
-                <div class="text-4xl font-extrabold text-white mb-1">Jul 28–30</div>
-                <div class="text-blue-200 text-sm font-medium mb-3">2026</div>
-                <div class="text-lg font-semibold text-white mb-2">IEYI 2026</div>
-                <p class="text-blue-200 text-sm">Exhibition, judging, and award ceremony at the National Aquatics Center.</p>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -356,10 +358,25 @@
 <!-- ═══════════════════════════════ AWARDS ═══════════════════════════════ -->
 <section id="awards" class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-white sm:text-4xl">Awards</h2>
             <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
             <p class="mt-4 text-slate-300 max-w-2xl mx-auto">The official IEYI 2026 award results are now available. Explore all 178 award-winning projects and filter the list by country, theme, group, or award.</p>
+        </div>
+
+        <!-- Exhibition judging photo banner -->
+        <div class="photo-card relative overflow-hidden rounded-2xl border border-slate-700/60 mb-12">
+            <img src="assets/3.webp" alt="A judge reviews a young inventor's smart traffic-safety project at IEYI 2026" width="1920" height="1226" loading="lazy" class="w-full h-64 sm:h-80 lg:h-96 object-cover object-[center_35%]">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent p-6 pt-16 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                    <p class="text-yellow-300 text-xs font-bold uppercase tracking-widest mb-1">Highlights</p>
+                    <p class="text-white text-lg sm:text-xl font-bold">On-Site Judging at the Water Cube</p>
+                </div>
+                <a href="https://m.alltuu.com/album/3989269a424ede2e28e3555e5739a059/?from=qrCode&amp;menu=live" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-full transition">
+                    View Full Album
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </a>
+            </div>
         </div>
 
         <div class="mb-16 overflow-hidden rounded-2xl border border-blue-400/30 bg-blue-600 shadow-2xl shadow-blue-950/30">
@@ -632,6 +649,15 @@
                             <h3 class="text-lg font-medium text-white">Organizer</h3>
                             <p class="mt-1 text-slate-400">IEYI International Organizing Committee<br>Co-hosted by: IEYI China Organizing Committee<br>Conveyed by: ITCCC Innovative Education</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Water Cube photo card -->
+                <div class="photo-card group relative overflow-hidden rounded-2xl border border-slate-700/60 mt-10">
+                    <img src="水立方夜景.jpg" alt="National Aquatics Center Water Cube illuminated at night" loading="lazy" class="w-full h-52 sm:h-60 object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 to-transparent p-4 pt-12">
+                        <p class="text-white text-sm font-semibold">National Aquatics Center "Water Cube"</p>
+                        <p class="text-slate-400 text-xs mt-0.5">Olympic Green, Beijing</p>
                     </div>
                 </div>
             </div>
