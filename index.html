@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body { font-family: 'Inter', sans-serif; }
         .hero-bg {
             background-image: url('水立方夜景.jpg');
@@ -36,11 +36,10 @@
                 <a href="#about"        class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">About</a>
                 <a href="#dates"        class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Dates</a>
                 <a href="#categories"   class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Categories</a>
-                <a href="#registration" class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Registration</a>
                 <a href="#awards"       class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Awards</a>
                 <a href="#schedule"     class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Schedule</a>
                 <a href="#contact"      class="text-slate-600 hover:text-blue-700 font-medium text-sm transition">Contact</a>
-                <a href="mailto:ieyi@itccc.org.cn" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-full font-semibold text-sm transition shadow-lg shadow-blue-700/20">Register Now</a>
+                <a href="IEYI2026_awards.html" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-full font-semibold text-sm transition shadow-lg shadow-blue-700/20">Award Results</a>
             </div>
             <button id="menu-btn" class="lg:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,11 +53,10 @@
         <a href="#about"        class="block text-slate-600 hover:text-blue-700 font-medium py-1">About</a>
         <a href="#dates"        class="block text-slate-600 hover:text-blue-700 font-medium py-1">Dates</a>
         <a href="#categories"   class="block text-slate-600 hover:text-blue-700 font-medium py-1">Categories</a>
-        <a href="#registration" class="block text-slate-600 hover:text-blue-700 font-medium py-1">Registration</a>
         <a href="#awards"       class="block text-slate-600 hover:text-blue-700 font-medium py-1">Awards</a>
         <a href="#schedule"     class="block text-slate-600 hover:text-blue-700 font-medium py-1">Schedule</a>
         <a href="#contact"      class="block text-slate-600 hover:text-blue-700 font-medium py-1">Contact</a>
-        <a href="mailto:ieyi@itccc.org.cn" class="block bg-blue-700 text-white text-center font-bold py-3 rounded-xl mt-2">Register Now</a>
+        <a href="IEYI2026_awards.html" class="block bg-blue-700 text-white text-center font-bold py-3 rounded-xl mt-2">Award Results</a>
     </div>
 </nav>
 
@@ -87,8 +85,8 @@
                 </svg>
                 <span class="font-medium">National Aquatics Center "Water Cube", Beijing</span>
             </div>
-            <a href="mailto:ieyi@itccc.org.cn" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 shadow-xl shadow-blue-900/30 transition-all duration-200">
-                Register Now
+            <a href="IEYI2026_awards.html" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 shadow-xl shadow-blue-900/30 transition-all duration-200">
+                View Award Results
                 <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
@@ -148,19 +146,7 @@
             <h2 class="text-3xl font-bold text-white sm:text-4xl">Important Dates</h2>
             <div class="w-20 h-1 bg-blue-300 mx-auto mt-4 rounded-full"></div>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition">
-                <div class="text-4xl font-extrabold text-white mb-1">Mar 23</div>
-                <div class="text-blue-200 text-sm font-medium mb-3">2026</div>
-                <div class="text-lg font-semibold text-white mb-2">Registration Opens</div>
-                <p class="text-blue-200 text-sm">Online submission system opens for all teams worldwide.</p>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition">
-                <div class="text-4xl font-extrabold text-white mb-1">May 31</div>
-                <div class="text-blue-200 text-sm font-medium mb-3">2026</div>
-                <div class="text-lg font-semibold text-white mb-2">Registration Deadline</div>
-                <p class="text-blue-200 text-sm">All forms and documents must be submitted by this date (GMT+8). Hotel reservations due.</p>
-            </div>
+        <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition">
                 <div class="text-4xl font-extrabold text-white mb-1">Jul 27</div>
                 <div class="text-blue-200 text-sm font-medium mb-3">2026</div>
@@ -367,73 +353,37 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════ REGISTRATION ═══════════════════════════════ -->
-<section id="registration" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Registration</h2>
-            <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-            <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Registration is open from <strong>March 23 to May 31, 2026</strong>. All registration must be completed by the designated regional organizer. All information must be submitted in English.</p>
-        </div>
-
-        <!-- 3-Step Process -->
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-            <div class="relative">
-                <div class="bg-blue-700 text-white rounded-2xl p-8 h-full">
-                    <div class="text-5xl font-extrabold text-blue-300 mb-4">01</div>
-                    <h3 class="text-xl font-bold mb-3">Register Work Information</h3>
-                    <p class="text-blue-100 text-sm leading-relaxed">Submit your project details through the official online collection system. The system will generate a unique <strong>Registration Number</strong> and send a confirmation email.</p>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="bg-slate-800 text-white rounded-2xl p-8 h-full">
-                    <div class="text-5xl font-extrabold text-slate-500 mb-4">02</div>
-                    <h3 class="text-xl font-bold mb-3">Individual Member Registration</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">Each individual (students, team leaders, parents, and other escorts) must submit a <strong>separate registration record</strong> including a clear passport scan. This is required for venue access credentials.</p>
-                    <div class="text-xs text-slate-400 space-y-1">
-                        <div><strong class="text-slate-300">Student:</strong> Must be present on site</div>
-                        <div><strong class="text-slate-300">Team Leader:</strong> Lead teacher or parent proxy</div>
-                        <div><strong class="text-slate-300">Parent:</strong> Accompanying parent</div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="bg-emerald-700 text-white rounded-2xl p-8 h-full">
-                    <div class="text-5xl font-extrabold text-emerald-400 mb-4">03</div>
-                    <h3 class="text-xl font-bold mb-3">Submit Registration Form</h3>
-                    <p class="text-emerald-100 text-sm leading-relaxed mb-6">Complete the Excel Registration Form (provided by the organizing committee) with all contestant details. Send to the official email before the deadline. Subject line: <strong>[Country/Region] + Registration Form</strong>.</p>
-                    <a href="mailto:ieyi@itccc.org.cn" class="inline-flex items-center gap-2 bg-white text-emerald-700 font-semibold px-4 py-2.5 rounded-lg text-sm hover:bg-emerald-50 transition">
-                        Email: ieyi@itccc.org.cn
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Participation Requirements -->
-        <div class="mb-12">
-            <h3 class="text-xl font-bold text-slate-900 mb-6">Participation Requirements</h3>
-            <div class="bg-slate-50 rounded-xl border border-slate-200 p-6 max-w-xl">
-                    <h4 class="font-semibold text-slate-900 mb-3">Eligibility</h4>
-                    <ul class="text-sm text-slate-600 space-y-2">
-                        <li>• Students between <strong>6 and 19 years old</strong></li>
-                        <li>• Elementary, junior high, senior high, vocational high school, or equivalent</li>
-                        <li>• Use official Romanized names as shown on passport</li>
-                        <li>• One person cannot be on multiple teams simultaneously</li>
-                    </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
-
 <!-- ═══════════════════════════════ AWARDS ═══════════════════════════════ -->
 <section id="awards" class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-white sm:text-4xl">Awards</h2>
             <div class="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
-            <p class="mt-4 text-slate-400 max-w-2xl mx-auto">The on-site track and the online track are reviewed independently. Awards are given separately for Junior Group and Senior Group.</p>
+            <p class="mt-4 text-slate-300 max-w-2xl mx-auto">The official IEYI 2026 award results are now available. Explore all 178 award-winning projects and filter the list by country, theme, group, or award.</p>
+        </div>
+
+        <div class="mb-16 overflow-hidden rounded-2xl border border-blue-400/30 bg-blue-600 shadow-2xl shadow-blue-950/30">
+            <div class="grid gap-8 p-8 md:grid-cols-[1fr_auto] md:items-center md:p-10">
+                <div>
+                    <p class="mb-3 text-sm font-bold uppercase tracking-widest text-blue-100">Official Results · Published July 28, 2026</p>
+                    <h3 class="text-2xl font-bold text-white sm:text-3xl">Meet this year's award-winning young inventors</h3>
+                    <div class="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-blue-100">
+                        <span><strong class="text-2xl text-white">178</strong> Projects</span>
+                        <span><strong class="text-2xl text-white">11</strong> Countries/Regions</span>
+                        <span><strong class="text-2xl text-white">7</strong> Themes</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <a href="IEYI2026_awards.html" class="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-white px-6 py-3 font-bold text-blue-800 shadow-lg transition hover:bg-blue-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        View All Award Results
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
+                    <a href="https://shuju.itccc.org.cn/f/A18cSQ/s/I2qEmr" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-blue-200/60 bg-blue-800/40 px-6 py-3 font-bold text-white transition hover:bg-blue-800/70 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        Download Certificates
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-10 mb-12">
@@ -551,32 +501,6 @@
 
         <div class="relative border-l-4 border-blue-200 ml-4 md:ml-0 space-y-10">
             <div class="relative pl-8 md:pl-0">
-                <div class="absolute -left-3 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-sm"></div>
-                <div class="md:flex items-start justify-between group">
-                    <div class="md:w-1/3 mb-2 md:mb-0 md:text-right md:pr-8">
-                        <h3 class="text-lg font-bold text-blue-900">Mar 23, 2026</h3>
-                        <p class="text-slate-500 text-sm">Registration Opens</p>
-                    </div>
-                    <div class="md:w-2/3 bg-slate-50 p-5 rounded-xl border border-slate-100 group-hover:shadow-md transition">
-                        <h4 class="font-bold text-slate-900 mb-1">Registration Opens</h4>
-                        <p class="text-slate-600 text-sm">Online submission system opens. Teams may begin registering work information and individual members.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="relative pl-8 md:pl-0">
-                <div class="absolute -left-3 top-0 w-6 h-6 bg-red-500 rounded-full border-4 border-white shadow-sm"></div>
-                <div class="md:flex items-start justify-between group">
-                    <div class="md:w-1/3 mb-2 md:mb-0 md:text-right md:pr-8">
-                        <h3 class="text-lg font-bold text-blue-900">May 31, 2026</h3>
-                        <p class="text-slate-500 text-sm">Deadline</p>
-                    </div>
-                    <div class="md:w-2/3 bg-slate-50 p-5 rounded-xl border border-slate-100 group-hover:shadow-md transition">
-                        <h4 class="font-bold text-slate-900 mb-1">Registration &amp; Hotel Deadline</h4>
-                        <p class="text-slate-600 text-sm">All forms and documents must be submitted (GMT+8). Hotel reservations through the exclusive link must also be made by this date to secure accommodation and transportation services.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="relative pl-8 md:pl-0">
                 <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow-sm"></div>
                 <div class="md:flex items-start justify-between group">
                     <div class="md:w-1/3 mb-2 md:mb-0 md:text-right md:pr-8">
@@ -585,7 +509,7 @@
                     </div>
                     <div class="md:w-2/3 bg-slate-50 p-5 rounded-xl border border-slate-100 group-hover:shadow-md transition">
                         <h4 class="font-bold text-slate-900 mb-1">Teams Arrive in Beijing</h4>
-                        <p class="text-slate-600 text-sm">Teams arrive at Beijing. Check-in &amp; registration at the designated hotel (15:00–18:00). Airport pickup service available 10:00–20:00 for teams booked through the official hotel link.</p>
+                        <p class="text-slate-600 text-sm">Teams arrive in Beijing. Event check-in at the designated hotel takes place from 15:00–18:00.</p>
                     </div>
                 </div>
             </div>
@@ -669,7 +593,7 @@
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-                <p class="text-slate-400 mb-8 text-lg">Have questions about registration or the event? Our team is here to assist you.</p>
+                <p class="text-slate-400 mb-8 text-lg">Have questions about the event or award results? Our team is here to assist you.</p>
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
@@ -708,11 +632,17 @@
                 </div>
             </div>
             <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <h3 class="text-xl font-bold mb-2">Ready to Participate?</h3>
-                <p class="text-slate-400 mb-6 text-sm">Registration is open March 23 – May 31, 2026. Contact us via email to get the registration materials and secure your spot at IEYI 2026 Beijing.</p>
-                <a href="mailto:ieyi@itccc.org.cn" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-4 rounded-xl transition duration-200">
-                    Contact: ieyi@itccc.org.cn
-                </a>
+                <p class="text-sm font-bold uppercase tracking-widest text-blue-400 mb-3">IEYI 2026 Results</p>
+                <h3 class="text-xl font-bold mb-2">Explore the Award-Winning Projects</h3>
+                <p class="text-slate-400 mb-6 text-sm">Search the official results by project, country or region, theme, group, and award.</p>
+                <div class="space-y-3">
+                    <a href="IEYI2026_awards.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-4 rounded-xl transition duration-200">
+                        View Award Results
+                    </a>
+                    <a href="https://shuju.itccc.org.cn/f/A18cSQ/s/I2qEmr" target="_blank" rel="noopener noreferrer" class="block w-full border border-slate-600 hover:border-slate-500 hover:bg-slate-700 text-white text-center font-bold py-4 rounded-xl transition duration-200">
+                        Download Certificates
+                    </a>
+                </div>
             </div>
         </div>
     </div>
